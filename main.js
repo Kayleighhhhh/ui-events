@@ -59,5 +59,16 @@ enLink.addEventListener('animationend', enClick)
 
 //stap 3. class toevoegen aan enLink
 function enClick() {
-  enLink.classList.toggle('andtranslated')
+  enLink.classList.toggle('andtranslated');
+}
+
+//development
+
+let devshake = document.querySelector('a[href="#development"]');
+
+devshake.addEventListener('dblclick', shakeClick);
+devshake.addEventListener('animationend', shakeClick);
+
+function shakeClick() {
+  devshake.classList.toggle('shakingdev');
 }

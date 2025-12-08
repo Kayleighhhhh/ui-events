@@ -156,3 +156,34 @@ animation-timing-function: linear;
     translate: 0em 0em;
   }
 }
+
+/* a[href="#development"] {
+animation-name: shakeit;
+animation-duration: .1s;
+animation-iteration-count: 5;
+/* animation-timing-function: linear; */
+/* }  */
+
+.shakingdev {
+animation-name: shakeit;
+animation-duration: .1s;
+animation-iteration-count: 5;
+}
+
+@keyframes shakeit {
+  0%{
+    translate: 0em -2em;
+  }
+  25%{
+    translate: 0em 2em;
+  }
+  50%{
+    translate: -2em 0em;
+  }
+  75%{
+    translate: 2em 0em;
+  }
+  100%{
+    translate: 0em -2em;
+  }
+}
