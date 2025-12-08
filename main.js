@@ -33,3 +33,15 @@ designLink.addEventListener('animationend', jumpHandler)
 
 // Stap 3: (Callback functie met) classList (.toggle(), .add(), etc.)
 // scaleLink.classList.toggle...
+
+// stap 1. de frontend link uit de html halen
+let scaleLink = document.querySelector('a[href="#frontend"]');
+
+//stap 2. een click event toevoegen aan de scaleLink
+scaleLink.addEventListener('click', scaleClick);
+scaleLink.addEventListener('animationend', scaleClick);
+
+//stap 3. door de event scaleClick te maken wordt er een class toegevoegd aan scaleLink
+function scaleClick() {
+  scaleLink.classList.toggle('frontendscaled');
+}
