@@ -39,9 +39,25 @@ let scaleLink = document.querySelector('a[href="#frontend"]');
 
 //stap 2. een click event toevoegen aan de scaleLink
 scaleLink.addEventListener('click', scaleClick);
+
+//stap 4. animationend toegoegen aan de scaleLink
 scaleLink.addEventListener('animationend', scaleClick);
 
 //stap 3. door de event scaleClick te maken wordt er een class toegevoegd aan scaleLink
 function scaleClick() {
   scaleLink.classList.toggle('frontendscaled');
+}
+
+//stap 1. de &link uit de html halen
+let enLink = document.querySelector('a[href="#and"]');
+
+//stap 2. een click event toevoegen aan enLink
+enLink.addEventListener('click', enClick);
+
+//stap 4. een animation end toevoegen aan enLink
+enLink.addEventListener('animationend', enClick)
+
+//stap 3. class toevoegen aan enLink
+function enClick() {
+  enLink.classList.toggle('andtranslated')
 }
