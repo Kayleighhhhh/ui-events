@@ -72,3 +72,37 @@ devshake.addEventListener('animationend', shakeClick);
 function shakeClick() {
   devshake.classList.toggle('shakingdev');
 }
+
+
+// sprint 5 link met focus
+
+let counter = 0;
+
+// gebruik een kleur, met die counter.
+// misschien met een array.. ['red', 'blue', 'purple', étc..]
+
+const colors = ["pink", "#9d7beb", "#050840"]
+
+// zoek de link met querySel..
+
+let sprintLink = document.querySelector('a[href="#sprint-5"]');
+
+// luister naar click
+
+sprintLink.addEventListener('focus', counterUp);
+
+// bij elke click, verander counter + 1
+
+let i = 0 
+
+function counterUp() {
+  if (i > 2) {
+  i = 0
+  }
+
+  counter = colors[i]
+  sprintLink.style.backgroundColor = counter
+  i = i + 1
+  console.log(counter)
+}
+
