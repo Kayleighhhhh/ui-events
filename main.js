@@ -106,3 +106,21 @@ function counterUp() {
   console.log(counter)
 }
 
+//fix mouseover
+
+//fix link opzoeken in html
+let textChangeLink = document.querySelector('a[href="#fix"]')
+
+// mouseover en function toevoegen
+textChangeLink.addEventListener('mouseover', changeit)
+textChangeLink.addEventListener('mouseout', stopit)
+  
+function changeit(){
+  textChangeLink.textContent = 'Hoi'
+  textChangeLink.classList.add('changelink')
+}
+
+function stopit(){
+  textChangeLink.textContent = 'Fix'
+  textChangeLink.classList.remove('changelink')
+}

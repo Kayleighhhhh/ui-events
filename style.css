@@ -187,3 +187,7 @@ animation-iteration-count: 5;
     translate: 0em -2em;
   }
 }
+
+.changelink {
+  background-color: var(--highlight-secondary);
+}
