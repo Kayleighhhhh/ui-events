@@ -191,3 +191,9 @@ animation-iteration-count: 5;
 .changelink {
   background-color: var(--highlight-secondary);
 }
+
+.keyupcolor {
+  background-color: var(--highlight-secondary);
+  color: white;
+  transition:.5s;
+}

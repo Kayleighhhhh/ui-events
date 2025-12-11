@@ -93,11 +93,11 @@ sprintLink.addEventListener('focus', counterUp);
 
 // bij elke click, verander counter + 1
 
-let i = 0 
+let i = 0
 
 function counterUp() {
   if (i > 2) {
-  i = 0
+    i = 0
   }
 
   counter = colors[i]
@@ -114,13 +114,29 @@ let textChangeLink = document.querySelector('a[href="#fix"]')
 // mouseover en function toevoegen
 textChangeLink.addEventListener('mouseover', changeit)
 textChangeLink.addEventListener('mouseout', stopit)
-  
-function changeit(){
+
+function changeit() {
   textChangeLink.textContent = 'Hoi'
   textChangeLink.classList.add('changelink')
 }
 
-function stopit(){
+function stopit() {
   textChangeLink.textContent = 'Fix'
   textChangeLink.classList.remove('changelink')
+}
+
+
+//user button keyup
+let userKeyup = document.querySelector('a[href="#user"]')
+
+document.addEventListener('keyup', keychange)
+document.addEventListener('keydown', keychangeback)
+
+function keychange(event) {
+  // console.log(event.key)
+  userKeyup.classList.add('keyupcolor')
+}
+
+function keychangeback(e) {
+  userKeyup.classList.remove('keyupcolor')
 }
