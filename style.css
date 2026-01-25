@@ -242,5 +242,16 @@ animation-name: rotateIt;
 }
 
 .blowup {
-  transform: scale(4);
+  transform: scale(3);
+  transition: transform 1.5s ease;
+}
+
+.hover-gradient {
+  --x: 30px;
+  --y: 30px;
+  background: radial-gradient( 
+    circle at var(--x) var(--y),
+    var(--highlight-secondary) 10%,
+    transparent 50%
+  ) 
 }

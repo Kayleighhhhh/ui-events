@@ -194,3 +194,27 @@ document.addEventListener("keyup", () => {
 // Stap 3: (Callback functie met) classList (.toggle(), .add(), etc.)
   interfaceBtn.classList.remove('blowup')
 });
+
+// interaction button
+// Stap 1: querySelector 
+const interactionBtn = document.querySelector('a[href="#interaction"]')
+
+// Stap 2: addEventListener 
+interactionBtn.addEventListener("mousemove", function (event) {
+  // Stap 3: (Callback functie met) classList (.toggle(), .add(), etc.)
+  interactionBtn.classList.add("hover-gradient");
+  
+  // zoeken waar de muis is
+  const x = event.offsetX;
+  const y = event.offsetY;
+
+  // custom property
+  interactionBtn.style.setProperty("--x", x + "px");
+  interactionBtn.style.setProperty("--y", y + "px");
+});
+
+// Stap 2: addEventListener 
+interactionBtn.addEventListener("mouseout", function () {
+  // Stap 3: (Callback functie met) classList (.toggle(), .add(), etc.)
+  interactionBtn.classList.remove("hover-gradient");
+})
