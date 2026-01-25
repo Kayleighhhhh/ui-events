@@ -240,3 +240,7 @@ animation-name: rotateIt;
     transform: rotateY(0deg); 
   }  
 }
+
+.blowup {
+  transform: scale(4);
+}

@@ -179,3 +179,18 @@ function flipUp() {
 flowBtn.addEventListener("animationend", function(){
   flowBtn.classList.remove("flip")
 })
+
+// interface button 
+// Stap 1: querySelector 
+let interfaceBtn = document.querySelector('a[href="#interface"]')
+
+// Stap 2: addEventListener 
+document.addEventListener("keydown", () => {
+// Stap 3: (Callback functie met) classList (.toggle(), .add(), etc.)
+  interfaceBtn.classList.add('blowup')
+});
+
+document.addEventListener("keyup", () => {
+// Stap 3: (Callback functie met) classList (.toggle(), .add(), etc.)
+  interfaceBtn.classList.remove('blowup')
+});
