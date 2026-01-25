@@ -140,3 +140,21 @@ function keychange(event) {
 function keychangeback(e) {
   userKeyup.classList.remove('keyupcolor')
 }
+
+// The button rotate
+// Stap 1: querySelector
+let theBtn = document.querySelector('a[href="#the"]')
+
+// Stap 2: addEventListener
+theBtn.addEventListener("mouseout", rotateIt)
+
+// Stap 3: (Callback functie met) classList (.toggle(), .add(), etc.)
+// scaleLink.classList.toggle..
+function rotateIt() {
+  theBtn.classList.add ("rotate")
+}
+
+theBtn.addEventListener("animationend", function(){
+  theLink.classList.remove("rotate")
+})
+
