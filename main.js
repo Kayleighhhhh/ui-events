@@ -158,3 +158,24 @@ theBtn.addEventListener("animationend", function(){
   theLink.classList.remove("rotate")
 })
 
+// flow buttnon mouse down & mouse up
+// Stap 1: querySelector
+let flowBtn = document.querySelector('a[href="#flow"]')
+
+// Stap 2: addEventListener
+flowBtn.addEventListener("mousedown", flipDown)
+flowBtn.addEventListener("mouseup", flipUp)
+
+// Stap 3: (Callback functie met) classList (.toggle(), .add(), etc.)
+// scaleLink.classList.toggle..
+function flipDown() {
+  flowBtn.classList.add("flip")
+}
+
+function flipUp() {
+  flowBtn.classList.remove("flip")
+}
+
+flowBtn.addEventListener("animationend", function(){
+  flowBtn.classList.remove("flip")
+})
